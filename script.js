@@ -1,75 +1,89 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const progressCircles = document.querySelectorAll(".circular-progress");
-
-    progressCircles.forEach(circle => {
-        const percentage = circle.getAttribute("data-percentage");
-        const progress = circle.querySelector(".progress");
-        const offset = 326 - (percentage / 100) * 326;
-        
-        progress.style.strokeDashoffset = offset;
-    });
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const tabButtons = document.querySelectorAll(".tab-button");
-    const contents = document.querySelectorAll(".content");
-
-    tabButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            // Remove active class from all buttons and contents
-            tabButtons.forEach(btn => btn.classList.remove("active"));
-            contents.forEach(content => content.classList.remove("active"));
-
-            // Add active class to the clicked button and the corresponding content
-            button.classList.add("active");
-            const target = button.getAttribute("data-target");
-            document.getElementById(target).classList.add("active");
+document.addEventListener('click', function (e) {
+    var navbar = document.getElementById('navbarNav');
+    var toggleButton = document.querySelector('.nav-menu');
+  
+    // If the clicked area is outside the navbar and the menu is open
+    if (!navbar.contains(e.target) && !toggleButton.contains(e.target)) {
+      if (navbar.classList.contains('show')) {
+        var collapse = new bootstrap.Collapse(navbar, {
+          toggle: false
         });
+        collapse.hide(); // Only hide if the navbar is open
+      }
+    }
+  });
+  
+  
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const skills = document.querySelectorAll('.circular-progress');
+    
+    skills.forEach(function(skill) {
+        const percentage = skill.getAttribute('data-percentage');
+        const circle = skill.querySelector('.progress');
+        const radius = circle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+        
+        const offset = circumference - (percentage / 100) * circumference;
+        circle.style.strokeDashoffset = offset;
+    });
+});
+
+
+
+// JavaScript to handle tab switching with fade animation
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all tab buttons
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to the clicked tab button
+        button.classList.add('active');
+
+        // Hide all content sections
+        document.querySelectorAll('.content').forEach(content => {
+            content.classList.remove('active');
+        });
+
+        // Show the content corresponding to the clicked tab
+        const target = button.getAttribute('data-target');
+        document.querySelector(`#${target}`).classList.add('active');
     });
 });
 
 
 
 
+// Optionally, you can show a success message or redirect user upon successful form submission.
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from submitting immediately
+
+    // Show a thank you alert or redirect
+    alert("Thank you! Your message has been sent.");
+    window.location.href = "thank_you_page.html"; // Optionally redirect to a thank you page
+});
 
 
 
 
 
-    const lightModeIcon = document.getElementById('light-mode-icon');
-    const darkModeIcon = document.getElementById('dark-mode-icon');
-    const body = document.body;
+// Back-to-Top Button Functionality
+const backToTopButton = document.getElementById('btn-back-to-top');
 
-    // Check local storage for theme preference
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-        lightModeIcon.style.display = 'none';
-        darkModeIcon.style.display = 'block';
-    }
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) { // Show button when scrolled down 200px
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+});
 
-    lightModeIcon.addEventListener('click', () => {
-        body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark'); // Save theme preference
-        lightModeIcon.style.display = 'none';
-        darkModeIcon.style.display = 'block';
-    });
-
-    darkModeIcon.addEventListener('click', () => {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light'); // Save theme preference
-        darkModeIcon.style.display = 'none';
-        lightModeIcon.style.display = 'block';
-    });
-
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth', // Smooth scrolling effect
+  });
+});
