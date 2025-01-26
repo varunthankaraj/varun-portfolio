@@ -63,7 +63,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
     // Show a thank you alert or redirect
     alert("Thank you! Your message has been sent.");
-    window.location.href = "thank_you_page.html"; // Optionally redirect to a thank you page
+   // Optionally redirect to a thank you page
 });
 
 
