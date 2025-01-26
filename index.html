@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Varun T Personal Portfolio</title>
+
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"rel="stylesheet"/>
+  
+  
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    
+    <nav id="navbar-top" class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid px-5">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="logo.png" alt="Logo">
+          </div>
+          <!-- Toggler Button -->
+          <button class="nav-menu d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-menu-button-fill"></i>
+          </button>
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-4 text-center" style="font-size: 1.1rem">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      
+
+<!-- Navbar ends here -->
+
+  
+   <!-- navbar ends here -->
+
+    
+    <!-- home section starts  -->
+    <section class="home pt-5 pb-5" id="home">
+        <div class="row justify-content-evenly align-middle">
+          <!-- here data-aos is used for adding aos animation  -->
+          <div class="col-10 col-md-6 text-center text-md-start" >
+            <h2 style="color: #3f396d">
+              Hello! I Am <br /><span class="c-orange">Varun T</span>
+            </h2>
+            <h3 style="color: #fca61f;">UI/UX Designer</h3>
+            <p class="text-muted">
+              To work in a challenging and dynamic environment that provides me with opportunities to learn and contribute to the organization.
+            </p>
+           <button
+  class="c-btn h-btn mt-3 py-3 px-5 rounded-pill"
+  onclick="window.open('https://drive.google.com/file/d/1yokyVGTJRBOHhzMFR-kKSOEUZR-gTbLY/view?usp=sharing', '_blank')"
+>
+  View Resume
+</button>
+           
+          </div>
+          <div class="col-10 col-md-4 d-none d-md-block">
+            <img src="me 1.jpg" class="img-fluid" alt="me" />
+          </div>
+        </div>
+      </section>
+      <!-- home section ends here -->
+
+
+
+<!-- About Section -->
+<section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center justify-content-evenly">
+        <!-- About Image -->
+        <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+          <img src="me 2.jpeg" alt="About Me Image" class="img-fluid rounded">
+        </div>
+        <!-- About Content -->
+        <div class="col-12 col-md-6">
+          <h3 class="mb-3" style="color: #3f396d;">About Me</h3>
+          <h4 class="mb-4" style="color: #fca61f;">My Introduction</h4>
+          <p class="text-muted">
+            Hi, I'm <span class="c-orange">Varun T</span>. I'm starting out as a UI/UX designer and love creating 
+            easy-to-use and visually appealing designs. I recently completed internships in UI/UX at 
+            <strong>Nandha Infotech</strong>, <strong>Zidio Development</strong>, and <strong>Tresveze & Co</strong>, 
+            where I gained hands-on experience and practiced using Figma on various personal projects. 
+            I'm excited to continue learning and working on new design projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-5">
+    <div class="container">
+        <h3 class="text-center mb-4" style="color: #3f396d;">Portfolio</h3>
+        <h4 class="text-center mb-5" style="color: #fca61f;">Most Recent Work</h4>
+        <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-12 col-md-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="project 1.png" alt="Project 1 Image" class="img-fluid rounded">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-name">
+                            <p class="text-center">In-Shape</p>
+                        </div>
+                        <div class="project-description text-center">
+                            <p>Gym Website UI/UX Design</p>
+                            <p style="color: black; font-weight: bold;">UI Design [Desktop]</p>
+                            <p> Figma</p>
+                        </div>
+                        <a href="https://www.behance.net/gallery/217520587/Gym-Website-UIUX-Design" class="view-project-btn d-block text-center" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-12 col-md-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="project 2.png" alt="Project 2 Image" class="img-fluid rounded">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-name">
+                            <p class="text-center">F & C</p>
+                        </div>
+                        <div class="project-description text-center">
+                            <p>E-commerce | Shopping</p>
+                            <p style="color: black; font-weight: bold;">UI Design [Mobile]</p>
+                            <p>Adobe Illustrator, Figma</p>
+                        </div>
+                        <a href="https://www.behance.net/gallery/205299981/Ecommerce-shopping-F-C" class="view-project-btn d-block text-center" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-12 col-md-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="project 3.png" alt="Project 3 Image" class="img-fluid rounded">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-name">
+                            <p class="text-center">Crown Horology</p>
+                        </div>
+                        <div class="project-description text-center">
+                            <p>Luxury Watch E-Commerce Website</p>
+                            <p style="color: black; font-weight: bold;">UI Design [Desktop]</p>
+                            <p>Figma</p>
+                        </div>
+                        <a href="https://www.behance.net/gallery/217528753/Crown-Horology-E-Commerce-UIUX-Design" class="view-project-btn d-block text-center" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View All Projects Button -->
+
+    </div>
+</section>
+
+
+
+<!-- Skills Section with Circular Progress -->
+<section id="skills">
+    <div class="skills-container">
+        <h3 style="color: #3f396d;">Skills</h3>
+        <div class="skills-grid">
+            <!-- Circular Skill 1: HTML5 -->
+            <div class="skill-item">
+                <p>HTML5</p>
+                <div class="circular-progress" data-percentage="80">
+                    <svg>
+                        <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#fdd28f" />
+                                <stop offset="50%" stop-color="#fcb74b" />
+                                <stop offset="100%" stop-color="#fca61f" />
+                            </linearGradient>
+                            
+                        </defs>
+                        <circle class="bg" cx="57" cy="57" r="52"></circle>
+                        <circle class="progress" cx="57" cy="57" r="52"></circle>
+                    </svg>
+                    <div class="skill-percentage">75%</div>
+                </div>
+            </div>
+
+            <!-- Circular Skill 2: CSS3 -->
+            <div class="skill-item">
+                <p>CSS3</p>
+                <div class="circular-progress" data-percentage="70">
+                    <svg>
+                        <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#816BCE" />
+                                <stop offset="100%" stop-color="#483688" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="bg" cx="57" cy="57" r="52"></circle>
+                        <circle class="progress" cx="57" cy="57" r="52"></circle>
+                    </svg>
+                    <div class="skill-percentage">70%</div>
+                </div>
+            </div>
+
+            <!-- Circular Skill 3: Figma -->
+            <div class="skill-item">
+                <p>Figma</p>
+                <div class="circular-progress" data-percentage="80">
+                    <svg>
+                        <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#816BCE" />
+                                <stop offset="100%" stop-color="#483688" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="bg" cx="57" cy="57" r="52"></circle>
+                        <circle class="progress" cx="57" cy="57" r="52"></circle>
+                    </svg>
+                    <div class="skill-percentage">80%</div>
+                </div>
+            </div>
+
+            <!-- Circular Skill 4: UI/UX Design -->
+            <div class="skill-item">
+                <p>UI/UX Design</p>
+                <div class="circular-progress" data-percentage="70">
+                    <svg>
+                        <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#816BCE" />
+                                <stop offset="100%" stop-color="#483688" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="bg" cx="57" cy="57" r="52"></circle>
+                        <circle class="progress" cx="57" cy="57" r="52"></circle>
+                    </svg>
+                    <div class="skill-percentage">70%</div>
+                </div>
+            </div>
+
+            <!-- Circular Skill 5: Wireframing -->
+            <div class="skill-item">
+                <p>Wireframing</p>
+                <div class="circular-progress" data-percentage="75">
+                    <svg>
+                        <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#816BCE" />
+                                <stop offset="100%" stop-color="#483688" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="bg" cx="57" cy="57" r="52"></circle>
+                        <circle class="progress" cx="57" cy="57" r="52"></circle>
+                    </svg>
+                    <div class="skill-percentage">70%</div>
+                </div>
+            </div>
+
+            <!-- Circular Skill 6: Prototyping -->
+            <div class="skill-item">
+                <p>Prototyping</p>
+                <div class="circular-progress" data-percentage="70">
+                    <svg>
+                        <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#816BCE" />
+                                <stop offset="100%" stop-color="#483688" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="bg" cx="57" cy="57" r="52"></circle>
+                        <circle class="progress" cx="57" cy="57" r="52"></circle>
+                    </svg>
+                    <div class="skill-percentage">70%</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Qualifications Section -->
+<section id="qualifications">
+    <div class="qualifications-container">
+        <h3 style="color: #3f396d;">Qualifications</h3>
+        <div class="tabs">
+            <button class="tab-button active" data-target="education">
+                <i class="fas fa-book-open"></i> <!-- Book Open Icon -->
+                Education
+            </button>
+            <button class="tab-button" data-target="certificates">
+                <i class="fas fa-award"></i> <!-- Award Icon -->
+                Certificates
+            </button>
+        </div>
+        
+        <div class="tab-content">
+            <!-- Education Content -->
+            <div class="content education active" id="education">
+                <h3>B.Tech in Information Technology</h3>
+                <p>University College Of Engineering Nagercoil</p>
+                <p>2019 - 2023</p>
+            </div>
+            <!-- Certificates Content -->
+            <div class="content certificates" id="certificates">
+                <ul>
+                    <li>ictacademy.skellsnetwork by ICT Academy (Feb 28, 2023)</li>
+                    <li>UI/UX Internship by Nandha Infotech (2 Months)</li>
+                    <li>UI/UX Internship by Internship Studio (1 Month)</li>
+                    <li>UI/UX Internship by Zidio Development (3 Months)</li>
+                    <li>UI/UX Internship by Tresveze & Co (2 Months)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-container">
+        <h3 style="color:#3f396d ;">Contact Me</h3>
+        <h4 style="color: #fca61f;">Get in Touch</h4>
+       
+
+        <div class="contact-details">
+            <p>If you would like to get in touch, feel free to reach out through the form below or connect with me via my social media accounts.</p>
+            <form action="https://formspree.io/f/manqnwdn" method="POST"> <!-- Change 'your_form_id' to your actual Form ID -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required style="width: 40%;">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required style="width: 40%;">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+</section>
+
+  <!-- contact section ends here -->
+
+
+<!-- Footer Section Starts -->
+    <footer class="text-center text-muted py-4" style="background-color: #1e1e2f; color: #ccc;">
+        <!-- Logo -->
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+        
+        <!-- Navigation Links -->
+        <div class="link-group mt-5">
+            <a href="#home">Home</a>
+            <div class="vr"></div>
+            <a href="#about">About</a>
+            <div class="vr"></div>
+            <a href="#portfolio">Portfolio</a>
+            <div class="vr"></div>
+            <a href="#skills">Skills</a>
+            <div class="vr"></div>
+            <a href="#contact">Contact</a>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div class="social-links mt-5">
+            <a href="https://www.linkedin.com/in/varun-t-8133a824a" target="_blank" class="rounded-pill linkedin">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://wa.me/9524749542" target="_blank" class="rounded-pill whatsapp">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="https://www.behance.net/varunyt1/projects" target="_blank" class="rounded-pill behance">
+                <i class="bi bi-behance"></i>
+            </a>
+            <a href="https://github.com/varunthankaraj" target="_blank" class="rounded-pill github">
+                <i class="bi bi-github"></i>
+            </a>
+        </div>
+
+        <!-- Footer Bottom -->
+        <hr width="100%" size="2" color="#c2c2c2">
+        <p style="color: #c2c2c2;">© Copyright Varun T  All Rights Reserved</p>
+        <p style="color: #c2c2c2;">Designed by Varun T</p>
+    </footer>
+    <!-- Footer Section Ends -->
+  
+
+
+
+  
+  <!-- Back to Top Button -->
+  <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+
+
+<script src="script.js"></script>
+  </body>
