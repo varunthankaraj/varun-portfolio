@@ -1,89 +1,75 @@
-document.addEventListener('click', function (e) {
-    var navbar = document.getElementById('navbarNav');
-    var toggleButton = document.querySelector('.nav-menu');
-  
-    // If the clicked area is outside the navbar and the menu is open
-    if (!navbar.contains(e.target) && !toggleButton.contains(e.target)) {
-      if (navbar.classList.contains('show')) {
-        var collapse = new bootstrap.Collapse(navbar, {
-          toggle: false
-        });
-        collapse.hide(); // Only hide if the navbar is open
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.getAttribute('data-filter');
+
+    projectCards.forEach((card, index) => {
+      if (filter === "all") {
+        // Show all projects smoothly from top
+        card.classList.remove("hide");
+        card.style.animation = `slideDownFade 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) ${index * 0.1}s forwards`;
+      } 
+      else if (filter === "live") {
+        if (card.classList.contains("live")) {
+          // Live projects rise up smoothly
+          card.classList.remove("hide");
+          card.style.animation = `slideUpFade 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) ${index * 0.1}s forwards`;
+        } else {
+          // Others fade out slowly upwards
+          card.style.animation = "slideUpFadeOut 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards";
+          setTimeout(() => card.classList.add("hide"), 800);
+        }
       }
-    }
+    });
   });
-  
-  
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const skills = document.querySelectorAll('.circular-progress');
-    
-    skills.forEach(function(skill) {
-        const percentage = skill.getAttribute('data-percentage');
-        const circle = skill.querySelector('.progress');
-        const radius = circle.r.baseVal.value;
-        const circumference = 2 * Math.PI * radius;
-        
-        const offset = circumference - (percentage / 100) * circumference;
-        circle.style.strokeDashoffset = offset;
-    });
 });
 
-
-
-// JavaScript to handle tab switching with fade animation
-document.querySelectorAll('.tab-button').forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from all tab buttons
-        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-
-        // Add active class to the clicked tab button
-        button.classList.add('active');
-
-        // Hide all content sections
-        document.querySelectorAll('.content').forEach(content => {
-            content.classList.remove('active');
-        });
-
-        // Show the content corresponding to the clicked tab
-        const target = button.getAttribute('data-target');
-        document.querySelector(`#${target}`).classList.add('active');
-    });
-});
+// Inject smoother keyframes
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDownFade {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUpFadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-50px); }
+}`;
+document.head.appendChild(style);
 
 
 
 
-// Optionally, you can show a success message or redirect user upon successful form submission.
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form from submitting immediately
-
-    // Show a thank you alert or redirect
-    alert("Thank you! Your message has been sent.");
-  // Optionally redirect to a thank you page
-});
-
-
-
-
-
-// Back-to-Top Button Functionality
-const backToTopButton = document.getElementById('btn-back-to-top');
+// Reveal skills on scroll
+const skillCards = document.querySelectorAll('.skill-card');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) { // Show button when scrolled down 200px
-    backToTopButton.classList.add('show');
-  } else {
-    backToTopButton.classList.remove('show');
-  }
-});
+  skillCards.forEach((card, index) => {
+    const cardTop = card.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth', // Smooth scrolling effect
+    if (cardTop < windowHeight - 100) {
+      setTimeout(() => {
+        card.classList.add('reveal');
+      }, index * 120); // staggered reveal
+    }
   });
 });
